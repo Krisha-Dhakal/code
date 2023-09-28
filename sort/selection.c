@@ -8,15 +8,23 @@ void selection_sort(int a[], int n)
     {
         for (j = i + 1; j < n; j++)
         {
-            count++; // Increment the comparison count
-            if (a[i] > a[j])
+            if (a[j] < a[min])
             {
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-                swap++; // Increment the swap count
+                 // Increment comparison count
+                min = j;
             }
+            count++;
         }
+        
+        if (min != i)
+        {
+            // Swap elements and increment swap count
+            temp = a[i];
+            a[i] = a[min];
+            a[min] = temp;
+            swap++;
+        }
+    }
     }
     printf("\nComparison count is: %d\n", count);
     printf("Swap count is: %d\n", swap);
