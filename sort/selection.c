@@ -6,6 +6,7 @@ void selection_sort(int a[], int n)
 	int swap = 0;  // Initialize swap count
     for (i = 0; i < n - 1; i++)
     {
+	int min = i;
         for (j = i + 1; j < n; j++)
         {
             if (a[j] < a[min])
