@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
-
+int partition(int a[], int p, int r);
 int comp = 0; // Initialize comparison counter
 int swap = 0;      // Initialize swap counter
 
